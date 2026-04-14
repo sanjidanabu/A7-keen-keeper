@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png'
 import { HiOutlineHome } from 'react-icons/hi';
 import { MdOutlineAccessTime } from 'react-icons/md';
 import { IoStatsChartOutline } from 'react-icons/io5';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 
 const Navbar = () => {
@@ -19,23 +19,48 @@ const Navbar = () => {
                 
                 <div className="flex items-center space-x-6">
                     
-                  
-                    <Link to={"/"} className="flex items-center gap-2 text-gray-500 hover:text-gray-800  px-4 py-2 rounded-lg font-medium transition-all">
-                        <HiOutlineHome className="text-xl" />
-                        <span className="hidden sm:inline">Home</span>
-                    </Link>
+        <NavLink 
+    to={"/"} 
+    className={({ isActive }) => 
+        `flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+            isActive 
+            ? "bg-[#244D3F] text-white" 
+            : "text-gray-500 hover:text-gray-800"
+        }`
+    }
+     >
+    <HiOutlineHome className="text-xl" />
+    <span className="hidden sm:inline">Home</span>
+   </NavLink>
+                
+<NavLink 
+    to={"/timeline"} 
+    className={({ isActive }) => 
+        `flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+            isActive 
+            ? "bg-[#244D3F] text-white" 
+            : "text-gray-500 hover:text-gray-800"
+        }`
+    }
+>
+    <MdOutlineAccessTime className="text-xl" />
+    <span className="hidden sm:inline">Timeline</span>
+</NavLink>
 
-                  
-                    <Link to={"/timeline"} className="flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors font-medium">
-                        <MdOutlineAccessTime className="text-xl" />
-                        <span className="hidden sm:inline">Timeline</span>
-                    </Link>
 
-                 
-                    <Link to={"/status"} className="flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors font-medium">
-                        <IoStatsChartOutline className="text-xl" />
-                        <span className="hidden sm:inline">Status</span>
-                    </Link>
+<NavLink 
+    to={"/status"} 
+    className={({ isActive }) => 
+        `flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+            isActive 
+            ? "bg-[#244D3F] text-white" 
+            : "text-gray-500 hover:text-gray-800"
+        }`
+    }
+>
+    <IoStatsChartOutline className="text-xl" />
+    <span className="hidden sm:inline">Status</span>
+</NavLink>
 
                 </div>
             </div>
