@@ -5,6 +5,9 @@ import { RouterProvider } from 'react-router/dom'
 import { createBrowserRouter } from 'react-router'
 import RootLayout from './layout/RootLayout'
 import HomePage from './pages/homepage/HomePage'
+import Status from './pages/status/Status'
+import Timeline from './pages/timeline/Timeline'
+import NotFound from './pages/notfoundpage/NotFound'
 
 const router = createBrowserRouter(
   [
@@ -18,11 +21,15 @@ const router = createBrowserRouter(
         },
         {
           path: "/timeline",
-          element: <h2>timeline</h2>
+          element: <Timeline/>
         },
+        {
+          path:"/status",
+          element: <Status/>
+        }
       ],
 
-   errorElement: <h2>this page is not found</h2>,
+   errorElement: <NotFound/>
     
     
     },
