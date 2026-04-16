@@ -8,6 +8,8 @@ import HomePage from './pages/homepage/HomePage'
 import Status from './pages/status/Status'
 import Timeline from './pages/timeline/Timeline'
 import NotFound from './pages/notfoundpage/NotFound'
+import FriendDetails from './components/homepage/FriendDetails'
+import { TimelineProvider } from './context/TimelineContext'
 
 const router = createBrowserRouter(
   [
@@ -26,6 +28,10 @@ const router = createBrowserRouter(
         {
           path:"/status",
           element: <Status/>
+        },
+        {
+          path: "/friend/:id",
+          element: <FriendDetails/>
         }
       ],
 
@@ -41,6 +47,8 @@ const router = createBrowserRouter(
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    
-    <RouterProvider router={router} />
+    <TimelineProvider>
+      <RouterProvider router={router} />
+    </TimelineProvider>
   </StrictMode>,
 )

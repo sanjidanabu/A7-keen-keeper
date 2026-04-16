@@ -18,15 +18,12 @@ const FriendsCard = ({ friend }) => {
                 className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-gray-50 shadow-sm"
             />
 
-            
             <h3 className="text-lg font-bold text-gray-800 mb-1">{friend.name}</h3>
 
-          
             <p className="text-gray-400 text-xs font-medium mb-3">
                 {friend.days_since_contact}d ago
             </p>
 
-           
             <div className="flex flex-wrap justify-center gap-2 mb-4">
                 {friend.tags.map((tag, index) => (
                     <span 
@@ -38,7 +35,6 @@ const FriendsCard = ({ friend }) => {
                 ))}
             </div>
 
-          
             <button className={`px-6 py-2 rounded-full text-xs font-bold capitalize ${statusStyles[friend.status.toLowerCase()] || "bg-gray-200"}`}>
                 {friend.status}
             </button>
