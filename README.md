@@ -1,16 +1,25 @@
-# React + Vite
+1.Name of your project?
+Ans: Keen Keeper
+    ...
+2.A short description?
+Ans: Keen Keeper is a modern, user-friendly task management web application designed to help users organize their daily activities efficiently. The platform provides a clean interface for tracking goals and managing responsibilities, ensuring that nothing important slips through the cracks.
+     ...
+3.Technologies you used?
+Ans: Frontend: React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*Styling: Tailwind CSS & DaisyUI
 
-Currently, two official plugins are available:
+*Routing: React Router DOM
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*Deployment: Netlify
 
-## React Compiler
+*Toaster: Reat toastify
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*Icons: React Icons
+      ...
+4.3 key features of your project?
+Ans: *Interactive Dashboard: A centralized hub where users can view and manage their tasks with a visually appealing and organized layout.
 
-## Expanding the ESLint configuration
+*Responsive Design: Fully optimized for all screen sizes, providing a seamless experience whether accessed via a desktop, tablet, or smartphone.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*Dynamic Task Management: Allows users to efficiently categorize and update their progress, helping them stay focused on their most important priorities.
